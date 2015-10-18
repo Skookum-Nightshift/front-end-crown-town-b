@@ -11,6 +11,7 @@ class AppBase extends React.Component {
   render(): ?ReactElement {
     return (
       <div className="AppBase">
+        <h1>Crown Town Compost</h1>
         <RouteHandler />
       </div>
     );

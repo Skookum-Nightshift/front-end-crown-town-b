@@ -13,6 +13,11 @@ class UserStore {
     });
   }
 
+  handleRegistrationFailed(errors) {
+    console.log(errors);
+    this.registrationErrors = errors;
+  }
+  
   handleUpdateUser(user) {
     this.user = user;
     cookie.save('user', user, {

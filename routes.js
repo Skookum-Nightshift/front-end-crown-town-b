@@ -12,6 +12,7 @@ import NotFound from './handlers/NotFound';
 import App from './handlers/Base';
 import Home from'./handlers/Home';
 import Dashboard from'./handlers/Dashboard';
+import CustomerLogin from './handlers/CustomerLogin';
 
 var routes = (
   <Route path="/" handler={App} >
@@ -21,6 +22,7 @@ var routes = (
       <Route name="help" handler ={Help}/>
       <Route name="account" handler ={Account}/>
     </Route>
+    <Route name="customer-login" handler={CustomerLogin} />
     <NotFoundRoute handler={NotFound} />
   </Route>
 );
