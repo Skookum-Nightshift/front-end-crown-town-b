@@ -1,6 +1,8 @@
 import React from 'react';
 import {Resolver} from 'react-resolver';
 import UserStore from '../../stores/UserStore';
+import UserActions from '../../actions/UserActions';
+import {Link} from 'react-router';
 
 class Home extends React.Component {
   constructor(props) {
@@ -8,13 +10,39 @@ class Home extends React.Component {
     this.state = {
       user: UserStore.getState().user
     };
+    this.onChange = this.onChange.bind(this);
   }
+
+  onLogout() {
+    UserActions.deleteUser();
+  }
+
+  componentDidMount() {
+    UserStore.listen(this.onChange);
+  }
+
+  componentWillUnmount() {
+    UserStore.unlisten(this.onChange);
+  }
+
+  onChange(state) {
+    this.setState({user: state.user});
+  }
+
   render(): ?ReactElement {
+    var accountLink = <li><Link to="/dashboard">My account</Link></li>;
+    var logoutLink = <li><a href="#" onClick={this.onLogout.bind(this)}>Log out</a></li>
+    var loginLink = <li><Link to="/customer-login">Log in</Link></li>;
+    var signupLink = <li><Link to="/customer-signup">Sign up</Link></li>;
+    var user = this.state.user;
     return (
       <div className="Home">
         <nav>
           <ul>
-            <li><a href="weekly.html">My account</a></li>
+            {user ? accountLink : null}
+            {user ? logoutLink : null}
+            {!user ? loginLink : null}
+            {!user ? signupLink : null}
             <li><a href="#">What's new?</a></li>
           </ul>
         </nav>

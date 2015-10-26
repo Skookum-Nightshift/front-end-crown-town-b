@@ -4,14 +4,16 @@
 require('./styles.css');
 
 import React from 'react';
+import UserStore from '../../stores/UserStore';
 import {RouteHandler} from 'react-router';
 
 class AppBase extends React.Component {
-
+  constructor(props) {
+    super(props);
+  }
   render(): ?ReactElement {
     return (
       <div className="AppBase">
-        <h1>Crown Town Compost</h1>
         <RouteHandler />
       </div>
     );

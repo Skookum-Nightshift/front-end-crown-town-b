@@ -8,17 +8,25 @@ class UserStore {
     this.user = cookie.load('user');
 
     this.bindListeners({
+      handleUpdateBucketLocation: UserActions.UPDATE_BUCKET_LOCATION,
+      handleUpdateCanPickup: UserActions.UPDATE_CAN_PICKUP,
       handleUpdateUser: UserActions.UPDATE_USER,
       handleDeleteUser: UserActions.DELETE_USER,
     });
   }
 
-  handleRegistrationFailed(errors) {
-    console.log(errors);
-    this.registrationErrors = errors;
+  handleUpdateBucketLocation(location) {
+    console.log(location);
+    this.user.bucket_location = location;
+  }
+
+  handleUpdateCanPickup(can_pickup) {
+    console.log(can_pickup);
+    this.user.can_pickup = can_pickup;
   }
   
   handleUpdateUser(user) {
+    console.log(user);
     this.user = user;
     cookie.save('user', user, {
       expires: new Date(user.auth_token_expiration)

@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthService from '../../lib/AuthService';
+// import AuthService from '../../lib/AuthService';
 
 class CustomerRegistration extends React.Component {
   onSubmit(e) {

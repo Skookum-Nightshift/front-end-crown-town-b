@@ -3,56 +3,87 @@ import React from 'react';
 import {Resolver} from 'react-resolver';
 
 class Help extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			showCall: false,
+			showSearch: false,
+			showEmail: false 
+		};
+	}
+
+	onPhone() {
+		this.setState({
+			showCall: !this.state.showCall,
+			showSearch: false,
+			showEmail: false
+		});
+	}
+
+	onSearch() {
+		this.setState({
+			showCall: false,
+			showSearch: !this.state.showSearch,
+			showEmail: false
+		});
+	}
+
+	onEmail() {
+		this.setState({
+			showCall: false,
+			showSearch: false,
+			showEmail: !this.state.showEmail
+		});
+	}
 
   render(): ?ReactElement {
     return (
-      <div className="Help">
-        Hello Help!
-		<div class="sub-header contact-icons">
-		<div class="call">
-			<i class="material-icons">phone</i>
-			<h4>CALL</h4>
-		</div>
+      <div>
+				<div className="sub-header contact-icons">
+					<div className="call" onClick={this.onPhone.bind(this)}>
+						<i className={"material-icons " + (this.state.showCall ? "active-icon" : "")}>phone</i>
+						<h4>CALL</h4>
+					</div>
 
-		<div class="search">
-			<i class="material-icons">search</i>
-			<h4>SEARCH</h4>
-		</div>
-		
-		<div class="email">
-			<i class="material-icons">email</i>
-			<h4>EMAIL</h4>
-		</div>
-	</div>
+					<div className="search" onClick={this.onSearch.bind(this)}>
+						<i className={"material-icons " + (this.state.showSearch ? "active-icon" : "")}>search</i>
+						<h4>SEARCH</h4>
+					</div>
+			
+					<div className="email" onClick={this.onEmail.bind(this)}>
+						<i className={"material-icons " + (this.state.showEmail ? "active-icon" : "")}>email</i>
+						<h4>EMAIL</h4>
+					</div>
+				</div>
 
-	<div class="info-header">
-		<div class="call hidden"><a href="tel:7045555555">704-555-5555</a></div>
-		
-		<div class="search hidden">
-			<h4>Enter a food item:</h4>
-			<input type="text">
-		</div>
-		
-		<div class="email hidden"><a href="mailto:crowntowncompost@gmail.com">crowntowncompost@gmail.com</a></div>
-	</div>
+				<div className="info-header">
+					<div className={"call " + (this.state.showCall ? '' : 'hidden')}><a href="tel:7045555555">704-555-5555</a></div>
+					
+					<div className={"search " + (this.state.showSearch ? '' : 'hidden')}>
+						<h4>Enter a food item:</h4>
+						<input type="text"/>
+					</div>
+					
+					<div className={"email " + (this.state.showEmail ? '' : 'hidden')}><a href="mailto:crowntowncompost@gmail.com">crowntowncompost@gmail.com</a></div>
+				</div>
 
-	<div class="requests">
-		<h2>Submit a Request</h2>
+				<div className="requests">
+					<h2>Submit a Request</h2>
 
-		<h4>New Compost Supplies</h4>
-		<div class="supply-button liners active"><span>&#10003;</span> Liners</div>
-		<div class="supply-button lid"><span class="hidden">&#10003;</span> Lid</div>
-		<div class="supply-button bucket"><span class="hidden">&#10003;</span> Bucket</div>
+					<h4>New Compost Supplies</h4>
+					<div className="supply-button liners active"><span>&#10003;</span> Liners</div>
+					<div className="supply-button lid"><span className="hidden">&#10003;</span> Lid</div>
+					<div className="supply-button bucket"><span className="hidden">&#10003;</span> Bucket</div>
 
-		<h4>Yard Sign</h4>
-		<div class="sign-button active keep"><span>&#10003;</span> Keep</div>
-		<div class="sign-button remove"><span class="hidden">&#10003;</span> Remove</div>
+					<h4>Yard Sign</h4>
+					<div className="sign-button active keep"><span>&#10003;</span> Keep</div>
+					<div className="sign-button remove"><span className="hidden">&#10003;</span> Remove</div>
 
-		<h4>Message</h4>
-		<textarea rows="10"></textarea>
+					<h4>Message</h4>
+					<textarea rows="10"></textarea>
 
-		<div class="submit-button">SUBMIT</div>
-	</div>
+					<div className="submit-button">SUBMIT</div>
+				</div>
       </div>
     );
   }
