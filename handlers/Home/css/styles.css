@@ -1,0 +1,42 @@
+.Home main {
+  width: 90%;
+  margin: 0 auto; }
+.Home footer {
+  background: #2c3e50;
+  color: #fff; }
+  @media (min-width: 850px) {
+    .Home footer {
+      display: flex; } }
+  .Home footer div {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center; }
+    @media (min-width: 850px) {
+      .Home footer div {
+        flex-grow: 1; } }
+    .Home footer div h2 {
+      font-weight: 200;
+      font-size: 1.25em; }
+    .Home footer div ul {
+      list-style: none;
+      display: flex;
+      padding: 0; }
+      .Home footer div ul li {
+        padding-top: 15px;
+        display: inline-block;
+        flex-grow: 1; }
+        .Home footer div ul li .border {
+          margin: 0 auto;
+          height: 68px;
+          width: 68px; }
+        .Home footer div ul li i, .Home footer div ul li .border {
+          border-radius: 50%;
+          border: 2px solid #e64c3b;
+          padding: 20px; }
+        .Home footer div ul li a {
+          color: #fff; }
+        .Home footer div ul li h4 {
+          font-weight: 200; }
+
+/*# sourceMappingURL=styles.css.map */

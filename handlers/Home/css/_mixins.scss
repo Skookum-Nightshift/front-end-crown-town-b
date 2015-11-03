@@ -1,0 +1,29 @@
+@mixin buttonStyles {
+	max-width: 350px;
+	margin: 20px auto;
+	padding: 20px 0 15px;
+	border-radius: 15px;
+	text-align: center;
+	font-size: 1.2em;
+}
+
+@mixin redButton {
+	background: $red;
+	color: $white;
+	border-bottom: 6px solid darken($red, 15%);
+	a, a:hover, a:visited {
+		color: $white;
+		text-decoration: none;
+	}
+}
+
+@mixin whiteButton {
+	background: $white;
+	color: $red;
+	border: 2px solid $red;
+	border-bottom: 6px solid $red;
+	a, a:hover, a:visited {
+		color: $red;
+		text-decoration: none;
+	}
+}

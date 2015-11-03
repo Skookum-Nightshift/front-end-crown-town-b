@@ -14,7 +14,7 @@ class Dashboard extends AuthenticatedRoute {
       <div>
         <div className="header">
           <img src={require('url-loader?mimetype=image/png!./ctc-logo.png')} alt="Crown Town Comopost logo" className="logo"/>
-      		<div className="nav">
+      		<nav className="nav">
       			<ul className="nav-tabs">
       				<li className={router.isActive('/dashboard', '', '') ? 'active' : ''}>
                 <Link to="/dashboard">WEEKLY</Link>
@@ -26,7 +26,7 @@ class Dashboard extends AuthenticatedRoute {
                 <Link to="/dashboard/account">ACCOUNT</Link>
               </li>
       			</ul>
-      		</div>
+      		</nav>
         </div>
         <RouteHandler/>
       </div>
