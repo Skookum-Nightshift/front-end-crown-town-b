@@ -46,7 +46,8 @@ section{
  * Remove the gray background color from active links in IE 10.
  */
 a {
-  background-color: transparent; }
+  background-color: transparent; 
+  text-decoration: none; }
 
 /**
  * Improve readability of focused elements when they are also in an
@@ -298,7 +299,12 @@ optgroup {
 
 body {
   box-sizing: border-box;
-  font-family: "Raleway", sans-serif; }
+  font-family: "Raleway", sans-serif; 
+}
+
+p {
+  letter-spacing: .05em;
+}
 
 .header {
   width: 100%;
@@ -330,7 +336,8 @@ body {
       margin-bottom: -20px;
       padding: 5px; 
       text-size: .8em;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      border-bottom: 10px solid transparent; }
       .nav .nav-tabs li a, .nav .nav-tabs li a:hover, .nav .nav-tabs li a:visited {
         color: #fff;
         text-decoration: none; }
