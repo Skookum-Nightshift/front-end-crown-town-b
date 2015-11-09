@@ -70,15 +70,6 @@ class Help extends React.Component {
 				<div className="requests">
 					<h2>Submit a Request</h2>
 
-					<h4>New Compost Supplies</h4>
-					<div className="supply-button liners active"><span>&#10003;</span> Liners</div>
-					<div className="supply-button lid"><span className="hidden">&#10003;</span> Lid</div>
-					<div className="supply-button bucket"><span className="hidden">&#10003;</span> Bucket</div>
-
-					<h4>Yard Sign</h4>
-					<div className="sign-button active keep"><span>&#10003;</span> Keep</div>
-					<div className="sign-button remove"><span className="hidden">&#10003;</span> Remove</div>
-
 					<h4>Message</h4>
 					<textarea rows="10"></textarea>
 
