@@ -1,0 +1,109 @@
+.Home {
+	section {
+		padding: 5% 15%;
+		color: $navyBlue;
+		h1 {
+			font-size: 2.5em;
+		}
+		h1, h2 {
+			color: $red;
+			font-weight: $font-light;
+			margin-bottom: 15px;
+		}
+		&.blue {
+			background: $navyBlue;
+			color: $white;
+			
+			p {
+				font-weight: $font-light;
+			}
+		}
+		&.grey {
+			background: $lightGrey;
+		}
+		&.white {
+			background: $white;
+		}
+		.button {
+			@include buttonStyles;
+			&.red-button {
+				@include redButton;
+				&:hover {
+					@include whiteButton;
+				}
+			}
+			&.white-button {
+				@include whiteButton;
+				&:hover {
+					@include redButton;
+				}
+			}
+		}
+		form {
+			input[type="text"] {
+				border-radius: 10px;
+				width: 85%;
+				height: 35px;
+				display: block;
+				border: none;
+				margin: 15px auto;
+				border-bottom: 2px solid $red;
+			}
+		}
+	}
+	
+
+	// FOOTER
+	footer {
+		background: $navyBlue;
+		color: $white;
+		@media (min-width: 850px) {
+			display: flex;
+		}
+		div {
+			width: 100%;
+			box-sizing: border-box;
+			padding: 20px 0 0;
+			text-align: center;
+			@media (min-width: 850px) {
+				flex-grow: 1;
+			}
+			h2 {
+				font-weight: $font-light;
+				font-size: 1.25em;
+			}
+			ul {
+				list-style: none;
+				display: flex;
+				padding: 0;
+				li {
+					padding-top: 15px;
+					display: inline-block;
+					flex-grow: 1;
+					.border {
+						margin: 0 auto;
+						height: 54px;
+						width: 54px;
+					}
+					i {
+						font-size: 20px;
+					}
+					img {
+						height: 20px;
+					}
+					i, .border {
+						border-radius: 50%;
+					    border: 2px solid $red;
+					    padding: 15px;
+					}
+					a {
+						color: $white;
+					}
+					h4 {
+						font-weight: $font-light;
+					}
+				}
+			}
+		}
+	}
+}

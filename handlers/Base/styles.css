@@ -8,7 +8,6 @@
  *    without disabling user zoom.
  */
 html {
-  font-family: sans-serif;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -29,49 +28,17 @@ body {
  * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
-article,
-aside,
-details,
-figcaption,
-figure,
 footer,
 header,
-hgroup,
 main,
-menu,
 nav,
-section,
-summary {
+section{
   display: block; }
 
 /**
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  /* 1 */
-  vertical-align: baseline;
-  /* 2 */ }
-
-/**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
- */
-audio:not([controls]) {
-  display: none;
-  height: 0; }
-
-/**
- * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
- */
-[hidden],
-template {
-  display: none; }
 
 /* Links
    ========================================================================== */
@@ -79,7 +46,8 @@ template {
  * Remove the gray background color from active links in IE 10.
  */
 a {
-  background-color: transparent; }
+  background-color: transparent; 
+  text-decoration: none; }
 
 /**
  * Improve readability of focused elements when they are also in an
@@ -91,11 +59,6 @@ a:hover {
 
 /* Text-level semantics
    ========================================================================== */
-/**
- * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
- */
-abbr[title] {
-  border-bottom: 1px dotted; }
 
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
@@ -107,7 +70,8 @@ strong {
 /**
  * Address styling not present in Safari and Chrome.
  */
-dfn {
+dfn,
+em {
   font-style: italic; }
 
 /**
@@ -117,13 +81,6 @@ dfn {
 h1 {
   font-size: 2em;
   margin: 0.67em 0; }
-
-/**
- * Address styling not present in IE 8/9.
- */
-mark {
-  background: #ff0;
-  color: #000; }
 
 /**
  * Address inconsistent and variable font size in all browsers.
@@ -163,11 +120,6 @@ svg:not(:root) {
 
 /* Grouping content
    ========================================================================== */
-/**
- * Address margin not present in IE 8/9 and Safari.
- */
-figure {
-  margin: 1em 40px; }
 
 /**
  * Address differences between Firefox and other browsers.
@@ -343,22 +295,16 @@ textarea {
 optgroup {
   font-weight: bold; }
 
-/* Tables
-   ========================================================================== */
-/**
- * Remove most spacing between table cells.
- */
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-td,
-th {
-  padding: 0; }
+/* CUSTOM STYLES */
 
 body {
   box-sizing: border-box;
-  font-family: "Raleway", sans-serif; }
+  font-family: "Raleway", sans-serif; 
+}
+
+p {
+  letter-spacing: .05em;
+}
 
 .header {
   width: 100%;
@@ -385,10 +331,13 @@ body {
     .nav .nav-tabs li {
       display: inline-block;
       flex-grow: 1;
-      font-weight: 400;
+      font-weight: 200;
       letter-spacing: 0.25em;
       margin-bottom: -20px;
-      padding: 5px; }
+      padding: 5px; 
+      text-size: .8em;
+      text-transform: uppercase;
+      border-bottom: 10px solid transparent; }
       .nav .nav-tabs li a, .nav .nav-tabs li a:hover, .nav .nav-tabs li a:visited {
         color: #fff;
         text-decoration: none; }
