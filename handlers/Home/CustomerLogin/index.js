@@ -1,6 +1,6 @@
 import React from 'react';
-import UserActions from '../../actions/UserActions';
-import { apiPost } from '../../lib/requestLib';
+import UserActions from '../../../actions/UserActions';
+import { apiPost } from '../../../lib/requestLib';
 
 class CustomerLogin extends React.Component {
   constructor(props) {
@@ -20,7 +20,7 @@ class CustomerLogin extends React.Component {
     apiPost('v1/sign_in', {email, password}, 
       user => {
         UserActions.updateUser(user);
-        this.context.router.transitionTo('home');
+        this.context.router.transitionTo('dashboard');
       },
       errors => this.setState({ errors: errors })
     );
@@ -28,17 +28,17 @@ class CustomerLogin extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.onSubmit.bind(this)}>
-        <div>
-          <label>Email</label>
-          <input type="text" ref="email" />
-        </div>
-        <div>
-          <label>Password</label>
-          <input type="password" ref="password" />
-        </div>
-        <button type='submit'>Login</button>
-      </form>
+      <section className="grey">
+        <form onSubmit={this.onSubmit.bind(this)}>
+          <div>
+            <input type="text" placeholder="Email" ref="email" />
+          </div>
+          <div>
+            <input type="password" placeholder="Password" ref="password" />
+          </div>
+          <input type="submit" value="LOG IN" className="button red-button"/>
+        </form>
+      </section>
     )
   }
 }

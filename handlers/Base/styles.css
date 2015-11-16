@@ -369,16 +369,21 @@ p {
     border: 2px solid #e64c3b;
     padding: 20px; }
 
+.countdown .number-border {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    border: 2px solid #e64c3b;
+    margin-right: 10px;
+}
 .countdown .number {
   box-sizing: border-box;
   position: relative;
   bottom: 5px;
-  height: 75px;
-  width: 75px;
+  text-align: center;
+  line-height: 75px;
   font-size: 3.5em;
-  border-radius: 50%;
-  border: 2px solid #e64c3b;
-  margin-right: 10px; }
+ }
 .countdown .countdown-text {
   position: relative;
   bottom: 10px;
@@ -487,44 +492,6 @@ p {
   .requests textarea {
     border: 2px solid #e64c3b;
     width: 80%; }
-  .requests .supply-button {
-    display: inline-block;
-    text-align: center;
-    letter-spacing: .1em;
-    border: 2px solid #e64c3b;
-    color: #e64c3b;
-    padding: 10px;
-    width: 100px; }
-    .requests .supply-button.active {
-      background: #e64c3b;
-      color: #fff; }
-    .requests .supply-button.liners {
-      margin-right: -2.5px;
-      border-radius: 10px 0 0 10px; }
-    .requests .supply-button.lid {
-      margin-right: -2.5px;
-      margin-left: -2.5px;
-      border-radius: 0; }
-    .requests .supply-button.bucket {
-      margin-left: -2.5px;
-      border-radius: 0 10px 10px 0; }
-  .requests .sign-button {
-    display: inline-block;
-    text-align: center;
-    letter-spacing: .1em;
-    border: 2px solid #e64c3b;
-    color: #e64c3b;
-    padding: 10px;
-    width: 150px; }
-    .requests .sign-button.active {
-      background: #e64c3b;
-      color: #fff; }
-    .requests .sign-button.keep {
-      margin-right: -2.5px;
-      border-radius: 10px 0 0 10px; }
-    .requests .sign-button.remove {
-      margin-left: -2.5px;
-      border-radius: 0 10px 10px 0; }
   .requests .submit-button {
     max-width: 350px;
     margin: 20px auto;
@@ -579,5 +546,6 @@ p {
 .plan-options .bucket-plan-button.two {
   margin-left: -2.5px;
   border-radius: 0 10px 10px 0; }
+
 
 /*# sourceMappingURL=main.css.map */

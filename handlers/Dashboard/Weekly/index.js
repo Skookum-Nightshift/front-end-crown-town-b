@@ -62,7 +62,9 @@ class Weekly extends React.Component {
       <div className="Weekly">
 
       	<div className="sub-header countdown">
-      		<div className="number">7</div>
+          <div className="number-border">
+      		  <div className="number">7</div>
+          </div>
       		<div className="countdown-text">DAYS UNTIL PICK-UP</div>
       	</div>
 

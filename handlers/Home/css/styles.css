@@ -54,14 +54,17 @@
         .Home section .button.white-button:hover a, .Home section .button.white-button:hover a:hover, .Home section .button.white-button:hover a:visited {
           color: #fff;
           text-decoration: none; }
-  .Home section form input[type="text"] {
+  .Home section form input[type="text"], .Home section form input[type="password"] {
     border-radius: 10px;
     width: 85%;
     height: 35px;
     display: block;
     border: none;
     margin: 15px auto;
-    border-bottom: 2px solid #e64c3b; }
+    border-bottom: 2px solid #e64c3b;
+    padding-left: 10px; }
+  .Home section form input[type="submit"] {
+    letter-spacing: 0.25em; }
 .Home footer {
   background: #2c3e50;
   color: #fff; }
