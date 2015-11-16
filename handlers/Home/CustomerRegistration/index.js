@@ -20,25 +20,30 @@ class CustomerRegistration extends React.Component {
 
   render() {
     return (
-      <section className="grey">
-        <div>
-          <form onSubmit={this.onSubmit.bind(this)}>
-            <div>
-              <input type="text" placeholder="First Name" ref="firstName"/>
-            </div>
-            <div>
-              <input type="text" placeholder="Last Name" ref="lastName" />
-            </div>
-            <div>
-              <input type="text" placeholder="Email" ref="email" />
-            </div>
-            <div>
-              <input type="password" placeholder="Password" ref="password" />
-            </div>
-            <input type="submit" value="REGISTER" className="button red-button"/>
-          </form>
-        </div>
-      </section>
+      <main>
+        <section className="blue">
+          <h1>Create an Account</h1>
+        </section>
+        <section className="grey">
+          <div>
+            <form onSubmit={this.onSubmit.bind(this)}>
+              <div>
+                <input type="text" placeholder="First Name" ref="firstName"/>
+              </div>
+              <div>
+                <input type="text" placeholder="Last Name" ref="lastName" />
+              </div>
+              <div>
+                <input type="text" placeholder="Email" ref="email" />
+              </div>
+              <div>
+                <input type="password" placeholder="Password" ref="password" />
+              </div>
+              <input type="submit" value="REGISTER" className="button red-button"/>
+            </form>
+          </div>
+        </section>
+      </main>
     );
   }
 }

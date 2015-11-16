@@ -1,4 +1,14 @@
-@import '_variables.scss';
-@import '_mixins.scss';
+@import 'variables';
+@import 'mixins';
 
-@import '_general.scss';
+.Home {
+	@import 'general';
+	@import 'forms';
+
+	@import 'landing';
+	@import 'faq';
+	@import 'news';
+	
+
+	@import 'footer';
+}

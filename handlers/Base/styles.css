@@ -395,7 +395,7 @@ p {
 .weekly-options .cancel-button {
   background: #fff;
   max-width: 350px;
-  margin: 20px auto;
+  margin: 40px auto;
   padding: 20px 0 15px;
   border-radius: 15px;
   text-align: center;
@@ -443,7 +443,7 @@ p {
     margin-right: -2.5px;
     border-radius: 10px 0 0 10px; }
   .weekly-options .bucket-button.garage {
-    margin-left: -2.5px;
+    /*margin-left: -2.5px;*/
     border-radius: 0 10px 10px 0; }
 
 .active-icon {
@@ -547,5 +547,8 @@ p {
   margin-left: -2.5px;
   border-radius: 0 10px 10px 0; }
 
-
+.account, .requests {
+  max-width: 500px;
+  margin: 0 auto;
+}
 /*# sourceMappingURL=main.css.map */

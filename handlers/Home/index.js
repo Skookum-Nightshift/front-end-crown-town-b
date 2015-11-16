@@ -7,7 +7,7 @@ import UserActions from '../../actions/UserActions';
 import {Link, RouteHandler} from 'react-router';
 
 class Home extends React.Component {
-  constructor(props) {
+  constructor(props, context) {
     super(props);
     this.state = {
       user: UserStore.getState().user
@@ -32,11 +32,14 @@ class Home extends React.Component {
   }
 
   render(): ?ReactElement {
+    var { router } = this.context;
+
     var accountLink = <li><Link to="/dashboard">My account</Link></li>;
     var logoutLink = <li><Link to="/home" onClick={this.onLogout.bind(this)}>Log out</Link></li>
     var loginLink = <li><Link to="/home/customer-login">Log in</Link></li>;
     var signupLink = <li><Link to="/home/customer-signup">Sign up</Link></li>;
     var user = this.state.user;
+
     return (
       <div className="Home">
         <div className="header">
@@ -45,8 +48,12 @@ class Home extends React.Component {
           </Link>
           <nav className="nav">
             <ul className="nav-tabs">
-              <li><Link to="/home/news">News</Link></li>
-              <li><Link to="/home/faq">FAQ</Link></li>
+              <li>
+                <Link to="/home/news">News</Link>
+              </li>
+              <li>
+                <Link to="/home/faq">FAQ</Link>
+              </li>
               {user ? accountLink : null}
               {user ? logoutLink : null}
               {!user ? signupLink : null}
@@ -55,7 +62,7 @@ class Home extends React.Component {
           </nav>
         </div>
 
-        <RouteHandler />
+          <RouteHandler />
 
         <footer>
           <div className="left">

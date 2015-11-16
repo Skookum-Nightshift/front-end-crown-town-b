@@ -54,17 +54,36 @@
         .Home section .button.white-button:hover a, .Home section .button.white-button:hover a:hover, .Home section .button.white-button:hover a:visited {
           color: #fff;
           text-decoration: none; }
-  .Home section form input[type="text"], .Home section form input[type="password"] {
-    border-radius: 10px;
-    width: 85%;
-    height: 35px;
-    display: block;
-    border: none;
-    margin: 15px auto;
-    border-bottom: 2px solid #e64c3b;
-    padding-left: 10px; }
-  .Home section form input[type="submit"] {
-    letter-spacing: 0.25em; }
+.Home form input[type="text"], .Home form input[type="password"] {
+  border-radius: 10px;
+  width: 85%;
+  height: 35px;
+  display: block;
+  border: none;
+  margin: 30px auto;
+  border-bottom: 2px solid #e64c3b;
+  padding-left: 10px; }
+.Home form input[type="submit"] {
+  letter-spacing: 0.25em; }
+.Home .faq p {
+  padding-left: 30px;
+  margin: 0 0 40px; }
+  .Home .faq p strong {
+    display: block; }
+.Home .faq hr {
+  margin: 20px auto 40px;
+  width: 75%; }
+.Home .news h3 {
+  color: #e64c3b;
+  font-weight: 200; }
+.Home .news a, .Home .news a:visited {
+  color: #e64c3b;
+  text-decoration: none; }
+  .Home .news a:hover, .Home .news a:visited:hover {
+    color: #2c3e50;
+    text-decoration: none; }
+.Home .news p {
+  margin-bottom: 40px; }
 .Home footer {
   background: #2c3e50;
   color: #fff; }
@@ -81,7 +100,7 @@
         flex-grow: 1; } }
     .Home footer div h2 {
       font-weight: 200;
-      font-size: 1.25em; }
+      font-size: 1.1em; }
     .Home footer div ul {
       list-style: none;
       display: flex;
@@ -96,15 +115,16 @@
           width: 54px; }
         .Home footer div ul li i {
           font-size: 20px; }
-        .Home footer div ul li img {
-          height: 20px; }
         .Home footer div ul li i, .Home footer div ul li .border {
           border-radius: 50%;
           border: 2px solid #e64c3b;
           padding: 15px; }
+        .Home footer div ul li img {
+          height: 18px; }
         .Home footer div ul li a {
           color: #fff; }
         .Home footer div ul li h4 {
-          font-weight: 200; }
+          font-weight: 200;
+          font-size: 0.8em; }
 
 /*# sourceMappingURL=styles.css.map */

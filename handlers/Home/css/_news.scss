@@ -1,0 +1,17 @@
+.news {
+	h3 {
+		color: $red;
+		font-weight: $font-light;
+	}
+	a, a:visited {
+		color: $red;
+		text-decoration: none;
+		&:hover {
+			color: $navyBlue;
+			text-decoration: none;
+		}
+	}
+	p {
+		margin-bottom: 40px;
+	}
+}

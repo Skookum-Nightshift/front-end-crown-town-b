@@ -1,0 +1,15 @@
+form {
+	input[type="text"], input[type="password"] {
+		border-radius: 10px;
+		width: 85%;
+		height: 35px;
+		display: block;
+		border: none;
+		margin: 30px auto;
+		border-bottom: 2px solid $red;
+		padding-left: 10px;
+	}
+	input[type="submit"] {
+		letter-spacing: $nav-letter-spacing;
+	}
+}
