@@ -1,6 +1,6 @@
 import React from 'react';
 import {apiPost} from 'requestLib';
-import UserActions from '../../actions/UserActions';
+import UserActions from '../../../actions/UserActions';
 
 class CustomerRegistration extends React.Component {
   onSubmit(e) {
@@ -21,30 +21,32 @@ class CustomerRegistration extends React.Component {
 
   render() {
     return (
-      <main>
-        <section className="blue">
-          <h1>Create an Account</h1>
-        </section>
-        <section className="grey">
-          <div>
-            <form onSubmit={this.onSubmit.bind(this)}>
-              <div>
-                <input type="text" placeholder="First Name" ref="firstName"/>
-              </div>
-              <div>
-                <input type="text" placeholder="Last Name" ref="lastName" />
-              </div>
-              <div>
-                <input type="text" placeholder="Email" ref="email" />
-              </div>
-              <div>
-                <input type="password" placeholder="Password" ref="password" />
-              </div>
-              <input type="submit" value="REGISTER" className="button red-button"/>
-            </form>
-          </div>
-        </section>
-      </main>
+      <div className="Home">
+        <main>
+          <section className="blue">
+            <h1>Create an Account</h1>
+          </section>
+          <section className="grey">
+            <div>
+              <form onSubmit={this.onSubmit.bind(this)}>
+                <div>
+                  <input type="text" placeholder="First Name" ref="firstName"/>
+                </div>
+                <div>
+                  <input type="text" placeholder="Last Name" ref="lastName" />
+                </div>
+                <div>
+                  <input type="text" placeholder="Email" ref="email" />
+                </div>
+                <div>
+                  <input type="password" placeholder="Password" ref="password" />
+                </div>
+                <input type="submit" value="REGISTER" className="button red-button"/>
+              </form>
+            </div>
+          </section>
+        </main>
+      </div>
     );
   }
 }

@@ -17,7 +17,7 @@ import Help from './handlers/Dashboard/Help';
 import Account from './handlers/Dashboard/Account';
 import CustomerLogin from './handlers/Home/CustomerLogin';
 import CustomerRegistration from './handlers/Home/CustomerRegistration';
-import Landing from './handlers/Home/Landing';
+import Landing from './handlers/Home';
 import FAQ from './handlers/Home/FAQ';
 import News from './handlers/Home/News';
 

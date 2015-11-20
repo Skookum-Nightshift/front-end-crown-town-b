@@ -28,22 +28,24 @@ class CustomerLogin extends React.Component {
 
   render() {
     return (
-      <main>
-        <section className="blue">
-          <h1>Log In</h1>
-        </section>
-        <section className="grey">
-          <form onSubmit={this.onSubmit.bind(this)}>
-            <div>
-              <input type="text" placeholder="Email" ref="email" />
-            </div>
-            <div>
-              <input type="password" placeholder="Password" ref="password" />
-            </div>
-            <input type="submit" value="LOG IN" className="button red-button"/>
-          </form>
-        </section>
-      </main>
+      <div className="Home">
+        <main>
+          <section className="blue">
+            <h1>Log In</h1>
+          </section>
+          <section className="grey">
+            <form onSubmit={this.onSubmit.bind(this)}>
+              <div>
+                <input type="text" placeholder="Email" ref="email" />
+              </div>
+              <div>
+                <input type="password" placeholder="Password" ref="password" />
+              </div>
+              <input type="submit" value="LOG IN" className="button red-button"/>
+            </form>
+          </section>
+        </main>
+      </div>
     )
   }
 }

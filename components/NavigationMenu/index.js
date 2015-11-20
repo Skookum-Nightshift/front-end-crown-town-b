@@ -63,7 +63,7 @@ class NavigationMenu extends React.Component {
       return (
         <nav className="nav">
           <ul className="nav-tabs">
-            <li><a href="/new">News</a></li>
+            <li><a href="/news">News</a></li>
             <li><a href="/faq">FAQ</a></li>
             {user ? accountLink : null}
             {user ? logoutLink : null}
