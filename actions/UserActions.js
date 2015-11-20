@@ -6,12 +6,6 @@ class UserActions {
   updateUser(user) {
     this.dispatch(user);
   }
-  updateBucketLocation(location) {
-    this.dispatch(location);
-  }
-  updateCanPickup(can_pickup) {
-    this.dispatch(can_pickup);
-  }
   deleteUser() {
     this.dispatch();
   }

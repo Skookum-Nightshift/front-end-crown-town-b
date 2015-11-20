@@ -4,6 +4,7 @@ import UserStore from '../../stores/UserStore';
 class AuthenticatedRoute extends React.Component {
   static willTransitionTo(transition) {
       var user = UserStore.getState().user;
+      console.log(user);
       if (!user) {
           transition.redirect('customer-login', {}, { 'nextPath': transition.path });
       }

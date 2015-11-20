@@ -23,14 +23,12 @@ import News from './handlers/Home/News';
 
 var routes = (
   <Route path="/" handler={App} >
-    
-    <Route name="home" handler={Home}>
-      <DefaultRoute name="landing" handler={Landing} />
-      <Route name="faq" handler={FAQ} />
-      <Route name="news" handler={News} />
-      <Route name="customer-login" handler={CustomerLogin} />
-      <Route name="customer-signup" handler={CustomerRegistration} />
-    </Route>
+  
+    <DefaultRoute name="landing" handler={Landing} />
+    <Route name="faq" handler={FAQ} />
+    <Route name="news" handler={News} />
+    <Route name="customer-login" handler={CustomerLogin} />
+    <Route name="customer-signup" handler={CustomerRegistration} />
 
     <Route name="dashboard" handler={Dashboard}>
       <DefaultRoute name="weekly" handler={Weekly} />

@@ -1,6 +1,7 @@
 
 import React from 'react';
 import {Resolver} from 'react-resolver';
+import {apiPost} from 'requestLib';
 
 class Help extends React.Component {
 	constructor(props) {
@@ -10,6 +11,8 @@ class Help extends React.Component {
 			showSearch: false,
 			showEmail: false 
 		};
+
+		this.sendRequest = this.sendRequest.bind(this);
 	}
 
 	onPhone() {
@@ -34,6 +37,16 @@ class Help extends React.Component {
 			showSearch: false,
 			showEmail: !this.state.showEmail
 		});
+	}
+
+	sendRequest() {
+		let body = this.refs.messageBody.getDOMNode().value;
+		let user = this.props.user;
+		apiPost('v1/users/request', { body }, response => {
+			console.log(response);
+		},
+		null,
+		{ Authorization: `Bearer ${user.auth_token}` });
 	}
 
   render(): ?ReactElement {
@@ -71,9 +84,9 @@ class Help extends React.Component {
 					<h2>Submit a Request</h2>
 
 					<h4>Message</h4>
-					<textarea rows="10"></textarea>
+					<textarea rows="10" ref="messageBody"></textarea>
 
-					<div className="submit-button">SUBMIT</div>
+					<div className="submit-button" onClick={this.sendRequest} >SUBMIT</div>
 				</div>
       </div>
     );

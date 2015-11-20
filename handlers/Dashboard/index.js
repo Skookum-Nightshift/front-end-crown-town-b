@@ -1,37 +1,37 @@
 import React from 'react';
-import AuthenticatedRoute from '../../components/AuthenticatedRoute';
+import UserStore from '../../stores/UserStore';
 import {RouteHandler, Link} from 'react-router';
 import {Resolver} from 'react-resolver';
 
-class Dashboard extends AuthenticatedRoute {
+class Dashboard extends React.Component {
   constructor(props, context) {
     super(props);
-  }
-  render(): ?ReactElement {
-    var { router } = this.context;
+    this.state = {
+      user: UserStore.getState().user
+    };
 
+    this.onChange = this.onChange.bind(this);
+  }
+
+  componentDidMount() {
+    if (!this.state.user) {
+      this.context.router.transitionTo('customer-login');
+    }
+    UserStore.listen(this.onChange);
+  }
+
+  componentWillUnmount() {
+    UserStore.unlisten(this.onChange);
+  }
+
+  onChange(state) {
+    this.setState({user: state.user});
+  }
+
+  render(): ?ReactElement {
     return (
       <div>
-        <div className="header">
-          <Link to="/home">
-            <img src={require('url-loader?mimetype=image/png!./ctc-logo.png')} alt="Crown Town Comopost logo" className="logo"/>
-      		</Link>
-
-          <nav className="nav">
-      			<ul className="nav-tabs">
-      				<li className={router.isActive('/dashboard', '', '') ? 'active' : ''}>
-                <Link to="/dashboard">WEEKLY</Link>
-              </li>
-      				<li className={router.isActive('/dashboard/help', '', '') ? 'active' : ''}>
-                <Link to="/dashboard/help">HELP</Link>
-              </li>
-      				<li className={router.isActive('/dashboard/account', '', '') ? 'active' : ''}>
-                <Link to="/dashboard/account">ACCOUNT</Link>
-              </li>
-      			</ul>
-      		</nav>
-        </div>
-        <RouteHandler/>
+        <RouteHandler user={this.state.user} />
       </div>
     );
   }
